@@ -1,0 +1,9 @@
+@url = https://hj1lccp113.execute-api.us-east-1.amazonaws.com/prod
+
+###
+POST {{url}}/image
+Content-Type: application/json
+
+{
+  "description": "dog plays with children on the beach"
+}
