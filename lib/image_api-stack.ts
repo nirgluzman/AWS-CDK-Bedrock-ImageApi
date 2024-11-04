@@ -21,6 +21,7 @@ export class ImageApiStack extends cdk.Stack {
       bucketName: 'bedrock-images' + cdk.Stack.of(this).account,
       blockPublicAccess: BlockPublicAccess.BLOCK_ALL, // default setting
       removalPolicy: cdk.RemovalPolicy.DESTROY,
+      autoDeleteObjects: true, // objects should be automatically deleted when the bucket is removed from the stack or when the stack is deleted
     });
 
     // create a Lambda function to invoke Bedrock for image generation.
